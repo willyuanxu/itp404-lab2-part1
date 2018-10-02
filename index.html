@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Lab 2 Part 1</title>
+</head>
+<body>
+<template id="restaurant-template">
+<div id="restaurant">
+	{{#each restaurants}}
+		<h3>{{name}}</h3>
+		<p>Location: {{location}}</p>
+		<ul>
+		{{#each ownedBy as |owner|}}
+			<li>{{owner}}</li>
+		{{/each}}
+		</ul>
+		<a href="{{yelpPage}}">Check us out on Yelp</a>
+		{{#if acceptsApplePay}}
+			<img src="apple.png" alt-"apple-logo">
+		{{/if}}
+	{{/each}}
+
+</div>
+
+</template>
+
+
+<script src="jquery-3.3.1.js"></script>
+<script src="moment.js"></script>
+<script src="handlebars-v4.0.11.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
